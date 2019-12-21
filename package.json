@@ -1,0 +1,19 @@
+{
+  "name": "fcc-fel-quote",
+  "version": "1.0.0",
+  "description": "freeCodeCamp Front End Libraries Project 1 - Quotation Generator",
+  "main": "index.js",
+  "scripts": {
+    "develop": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ronald van der Bergh",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}
