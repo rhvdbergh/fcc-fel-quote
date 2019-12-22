@@ -19,11 +19,8 @@ class QuoteBox extends React.Component {
   render() {
     return (
       <div id="quote-box">
-        <TextBox
-          quote={quotes[this.state.currentQuote].quote}
-          author={quotes[this.state.currentQuote].author}
-        />
-        <AuthorBox />
+        <TextBox quote={quotes[this.state.currentQuote].quote} />
+        <AuthorBox author={quotes[this.state.currentQuote].author} />
         <NewQuoteButton />
         <TweetButton />
       </div>
