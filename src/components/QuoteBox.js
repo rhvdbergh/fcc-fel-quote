@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextBox from './TextBox';
 import AuthorBox from './AuthorBox';
 import NewQuoteButton from './NewQuoteButton';
@@ -11,21 +11,23 @@ const selectRandomQuote = arr => {
   return Math.round(Math.random() * (arr.length - 1));
 };
 
-class QuoteBox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { currentQuote: selectRandomQuote(quotes) };
-  }
-  render() {
-    return (
-      <div id="quote-box">
-        <TextBox quote={quotes[this.state.currentQuote].quote} />
-        <AuthorBox author={quotes[this.state.currentQuote].author} />
-        <NewQuoteButton />
-        <TweetButton />
-      </div>
-    );
-  }
-}
+const QuoteBox = props => {
+  const [currentQuote, changeQuote] = useState(
+    quotes[selectRandomQuote(quotes)]
+  );
+
+  return (
+    <div id="quote-box">
+      <TextBox quote={currentQuote.quote} />
+      <AuthorBox author={currentQuote.author} />
+      <NewQuoteButton
+        changeQuote={changeQuote}
+        quotes={quotes}
+        selectRandomQuote={selectRandomQuote}
+      />
+      <TweetButton />
+    </div>
+  );
+};
 
 export default QuoteBox;
