@@ -5,8 +5,6 @@ import NewQuoteButton from './NewQuoteButton';
 import TweetButton from './TweetButton';
 import quotes from '../quotes';
 
-// TODO: Select random quote at startup
-
 const selectRandomQuote = arr => {
   return Math.round(Math.random() * (arr.length - 1));
 };
