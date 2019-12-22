@@ -10,6 +10,10 @@ const quotes = [
   {
     author: 'Author Three',
     quote: 'Inspiring Quote 3'
+  },
+  {
+    author: 'Author Four',
+    quote: 'Inspiring Quote 4'
   }
 ];
 

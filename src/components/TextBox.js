@@ -1,7 +1,9 @@
 import React from 'react';
 
-const TextBox = () => {
-  return <h1 id="text"></h1>;
+// console.log(props.quote);
+
+const TextBox = props => {
+  return <h1 id="text">{props.quote}</h1>;
 };
 
 export default TextBox;
