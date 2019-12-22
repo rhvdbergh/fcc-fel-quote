@@ -1,0 +1,47 @@
+body,
+html {
+  background: blue;
+  color: rgb(240, 231, 231);
+  position: relative;
+  height: 100%;
+}
+
+#quote-box {
+  width: 600px;
+  height: 400px;
+  background-color: red;
+  text-align: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#text {
+  text-align: center;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+#author {
+  text-align: right;
+  padding: 20px;
+}
+
+#new-quote {
+  font-size: 1em;
+  display: inline-block;
+  padding: 20px;
+}
+
+#new-quote:hover {
+  text-align: right;
+  font-size: 1.3em;
+}
+
+#tweet-quote {
+  padding: 20px;
+  text-decoration: none;
+  color: rgb(240, 231, 231);
+}
