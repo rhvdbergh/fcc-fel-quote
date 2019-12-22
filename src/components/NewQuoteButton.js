@@ -5,7 +5,9 @@ const NewQuoteButton = props => {
     <h3
       id="new-quote"
       onClick={() =>
-        props.changeQuote(props.quotes[props.selectRandomQuote(props.quotes)])
+        props.changeQuotePos(
+          props.selectRandomQuote(props.quotes, props.currentQuotePos)
+        )
       }
     >
       NewQuoteButton

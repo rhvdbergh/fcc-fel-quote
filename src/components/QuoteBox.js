@@ -5,25 +5,34 @@ import NewQuoteButton from './NewQuoteButton';
 import TweetButton from './TweetButton';
 import quotes from '../quotes';
 
-const selectRandomQuote = arr => {
-  return Math.round(Math.random() * (arr.length - 1));
+const selectRandomQuote = (arr, currentQuotePos) => {
+  let newPos = Math.round(Math.random() * (arr.length - 1));
+
+  // don't let it return the current quote position - always change!
+  while (newPos === currentQuotePos && quotes.length > 1) {
+    newPos = Math.round(Math.random() * (arr.length - 1));
+  }
+
+  return newPos;
 };
 
 const QuoteBox = props => {
-  const [currentQuote, changeQuote] = useState(
-    quotes[selectRandomQuote(quotes)]
-  );
+  const [currentQuotePos, changeQuotePos] = useState(selectRandomQuote(quotes));
 
   return (
     <div id="quote-box">
-      <TextBox quote={currentQuote.quote} />
-      <AuthorBox author={currentQuote.author} />
+      <TextBox quote={quotes[currentQuotePos].quote} />
+      <AuthorBox author={quotes[currentQuotePos].author} />
       <NewQuoteButton
-        changeQuote={changeQuote}
+        currentQuotePos={currentQuotePos}
+        changeQuotePos={changeQuotePos}
         quotes={quotes}
         selectRandomQuote={selectRandomQuote}
       />
-      <TweetButton quote={currentQuote.quote} author={currentQuote.author} />
+      <TweetButton
+        quote={quotes[currentQuotePos].quote}
+        author={quotes[currentQuotePos].author}
+      />
     </div>
   );
 };
