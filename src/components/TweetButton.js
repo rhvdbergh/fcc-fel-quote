@@ -1,10 +1,12 @@
 import React from 'react';
 
-const TweetButton = () => {
+const TweetButton = props => {
   return (
-    <a id="tweet-quote" href="https://twitter.com/intent/tweet">
+    <a
+      id="tweet-quote"
+      href={`https://twitter.com/intent/tweet?text="${props.quote}"---${props.author}`}
+    >
       TweetButton
-      {/* TODO this needs to have ?text=[quote here] Tweet */}
     </a>
   );
 };

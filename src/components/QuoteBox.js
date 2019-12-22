@@ -23,7 +23,7 @@ const QuoteBox = props => {
         quotes={quotes}
         selectRandomQuote={selectRandomQuote}
       />
-      <TweetButton />
+      <TweetButton quote={currentQuote.quote} author={currentQuote.author} />
     </div>
   );
 };
