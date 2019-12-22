@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import QuoteBox from './QuoteBox';
 
 const App = () => {
-  return <div>Now React is working</div>;
+  return <QuoteBox />;
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
