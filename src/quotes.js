@@ -21,6 +21,15 @@ const quotes = [
     author: 'Celia (Shakespeare, As You Like It III, 2)',
     quote:
       "I would sing my song without a burden; thou bring'st me out of tune."
+  },
+  {
+    author: 'Lord Chief Justice (Shakespeare, Henry IV, Part II [I, 2])',
+    quote: 'What! you are as a candle, the better part burnt out.'
+  },
+  {
+    author: 'Portia (Shakespeare, Merchant of Venice II, 9)',
+    quote:
+      'Thus hath the candle singed the moth. O, these deliberate fools! when they do choose, They have the wisdom by their wit to lose.'
   }
 ];
 
