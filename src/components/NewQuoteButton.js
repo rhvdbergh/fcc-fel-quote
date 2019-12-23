@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewQuoteButton = props => {
   return (
-    <h3
+    <a
       id="new-quote"
       onClick={() =>
         props.changeQuotePos(
@@ -11,7 +11,7 @@ const NewQuoteButton = props => {
       }
     >
       NewQuoteButton
-    </h3>
+    </a>
   );
 };
 
