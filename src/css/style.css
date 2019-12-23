@@ -3,18 +3,20 @@ html {
   color: #20180d;
   position: relative;
   height: 100%;
+  background-color: #20180d;
 }
 
 body {
   background-image: url('../media/books.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #quote-box {
-  width: 600px;
-  height: 400px;
-  background-color: #dfc097;
+  width: 700px;
+  height: 450px;
+  background-color: #dfc097e3;
   text-align: center;
 
   position: absolute;
@@ -23,7 +25,12 @@ body {
   transform: translate(-50%, -50%);
 }
 
+#quote-section {
+  height: 70%;
+}
+
 #text {
+  font-family: 'Goudy Bookletter 1911', serif;
   text-align: center;
   padding: 20px;
   padding-top: 40px;
@@ -35,10 +42,11 @@ body {
 }
 
 #new-quote {
+  width: 25%;
   font-size: 1em;
   display: inline-block;
   padding: 20px;
-  marginl: 0 10px;
+  margin: 0 10px;
   transition: all 0.05s ease-in-out;
   background-color: #795a2b;
 }
@@ -50,12 +58,7 @@ body {
 }
 
 #tweet-quote {
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-}
-
-#tweet-quote {
+  width: 25%;
   padding: 20px;
   margin: 0 10px;
   display: inline-block;
@@ -68,4 +71,22 @@ body {
 #tweet-quote:hover {
   transform: scale(1.1);
   transform-origin: 50% 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  #quote-box {
+    width: 100%;
+    height: 100%;
+    background-color: #dfc097e3;
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #quote-section {
+    height: 80%;
+  }
 }

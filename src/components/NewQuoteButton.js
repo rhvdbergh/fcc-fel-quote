@@ -10,7 +10,7 @@ const NewQuoteButton = props => {
         )
       }
     >
-      NewQuoteButton
+      New Quote
     </a>
   );
 };

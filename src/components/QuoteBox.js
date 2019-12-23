@@ -21,18 +21,22 @@ const QuoteBox = props => {
 
   return (
     <div id="quote-box">
-      <TextBox quote={quotes[currentQuotePos].quote} />
-      <AuthorBox author={quotes[currentQuotePos].author} />
-      <NewQuoteButton
-        currentQuotePos={currentQuotePos}
-        changeQuotePos={changeQuotePos}
-        quotes={quotes}
-        selectRandomQuote={selectRandomQuote}
-      />
-      <TweetButton
-        quote={quotes[currentQuotePos].quote}
-        author={quotes[currentQuotePos].author}
-      />
+      <div id="quote-section">
+        <TextBox quote={quotes[currentQuotePos].quote} />
+        <AuthorBox author={quotes[currentQuotePos].author} />
+      </div>
+      <div id="button-section">
+        <NewQuoteButton
+          currentQuotePos={currentQuotePos}
+          changeQuotePos={changeQuotePos}
+          quotes={quotes}
+          selectRandomQuote={selectRandomQuote}
+        />
+        <TweetButton
+          quote={quotes[currentQuotePos].quote}
+          author={quotes[currentQuotePos].author}
+        />
+      </div>
     </div>
   );
 };
