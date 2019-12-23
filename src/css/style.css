@@ -89,4 +89,12 @@ body {
   #quote-section {
     height: 80%;
   }
+
+  #text {
+    font-size: 1.2em;
+  }
+
+  #author {
+    font-size: 0.8em;
+  }
 }
