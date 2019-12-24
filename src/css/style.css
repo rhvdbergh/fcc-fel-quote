@@ -87,7 +87,7 @@ body {
   }
 
   #quote-section {
-    height: 80%;
+    height: 75%;
   }
 
   #text {
@@ -96,5 +96,13 @@ body {
 
   #author {
     font-size: 0.8em;
+  }
+
+  #tweet-quote:hover {
+    transform: none;
+  }
+
+  #new-quote:hover {
+    transform: none;
   }
 }
